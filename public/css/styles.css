@@ -1,0 +1,33 @@
+body {
+  background: #AAA;
+}
+
+.t1 {
+  width: 30px;
+  height: 20px;
+  padding: 100px;
+  border: 2px dashed darkcyan;
+  cursor: pointer;
+}
+
+.t1-selected-true {
+  background: lightgreen;
+}
+
+.t1-selected-false {
+  background: #777;
+}
+
+.t1-love {
+  margin: auto;
+}
+.t1-learn {
+  float: right;
+}
+.t1-profit {
+  float: left;
+}
+.t1-proficiency {
+  margin: auto;
+  margin-top: 200px;
+}
