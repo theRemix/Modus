@@ -44,7 +44,7 @@ export function App(sources : Sources) : Sinks {
     <div className={`t2 t2-reward-freedom t2-selected-${freedom}`} data-selected={freedom}>Freedom</div>
   );
   const rewardPay$ = toggle(sources.DOM.select('.t2-reward-pay')).map(( pay:string ) =>
-    <div className={`t2 t2-love-pay t2-selected-${pay}`} data-selected={pay}>Pay</div>
+    <div className={`t2 t2-reward-pay t2-selected-${pay}`} data-selected={pay}>Pay</div>
   );
   const reward$ = xs.combine( sources.DOM.select('.t1-reward').events('click'), rewardFreedom$, rewardPay$ )
     .map(([ ev, freedom, pay ]) => 
