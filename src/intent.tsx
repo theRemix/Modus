@@ -4,6 +4,7 @@ const intent = DOM => ({
   currentLikePeople$ : DOM.select('#currentLikePeople').events('change'),
   currentLikeProduct$ : DOM.select('#currentLikeProduct').events('change'),
   currentLikeTech$ : DOM.select('#currentLikeTech').events('change'),
+  currentLikeNext$ : DOM.select('.currentLikeNext').events('click')
 });
 
 export default intent;

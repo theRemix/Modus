@@ -7,7 +7,8 @@ const reducers = ({
   unemployedStart$,
   currentLikePeople$,
   currentLikeProduct$,
-  currentLikeTech$
+  currentLikeTech$,
+  currentLikeNext$
 }) => xs.merge(
   workingStart$.mapTo(state => 
     state.set('step', currentSituationStep)
@@ -23,6 +24,9 @@ const reducers = ({
   ),
   currentLikeTech$.map(e => state => 
     state.setIn(['current','tech'], e.target.checked)
+  ),
+  currentLikeNext$.mapTo(state => 
+    state.set('step', 2)
   )
 );
 
