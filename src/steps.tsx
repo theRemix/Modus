@@ -60,6 +60,12 @@ const steps = [
     </div>,
     input : yesNoButtons
   },
+  {
+    label : <div>
+      <h2>Do you feel like you are receiving the monetary compensation that you deserve?</h2>
+    </div>,
+    input : yesNoButtons
+  },
   
 ];
 
