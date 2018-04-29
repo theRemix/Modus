@@ -8,7 +8,8 @@ const reducers = ({
   currentLikePeople$,
   currentLikeProduct$,
   currentLikeTech$,
-  currentLikeNext$
+  currentLikeNext$,
+  currentProficiency$,
 }) => xs.merge(
   workingStart$.mapTo(state => 
     state.set('step', currentSituationStep)
@@ -27,7 +28,12 @@ const reducers = ({
   ),
   currentLikeNext$.mapTo(state => 
     state.set('step', 2)
-  )
+  ),
+  currentProficiency$.map(answer => state => 
+    state
+      .setIn(['current','proficiency'], answer)
+      .set('step', 3)
+  ),
 );
 
 export default reducers;

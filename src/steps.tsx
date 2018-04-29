@@ -1,3 +1,12 @@
+const yesNoButtons = <div className="yes-now-buttons row">
+  <div className="column">
+    <button className="buttonNo">No</button>
+  </div>
+  <div className="column">
+    <button className="buttonYes">Yes</button>
+  </div>
+</div>;
+
 const steps = [
   {
     label : <div>
@@ -43,14 +52,13 @@ const steps = [
     label : <div>
       <h2>Do you feel that you are very proficient at what you do in your current position?</h2>
     </div>,
-    input : <div className="yes-now-buttons row">
-      <div className="column">
-        <button className="buttonNo">No</button>
-      </div>
-      <div className="column">
-        <button className="buttonYes">Yes</button>
-      </div>
-    </div>
+    input : yesNoButtons
+  },
+  {
+    label : <div>
+      <h2>Do you feel that you are learning a lot from your work environment or team?</h2>
+    </div>,
+    input : yesNoButtons
   },
   
 ];

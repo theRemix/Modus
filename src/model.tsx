@@ -11,19 +11,18 @@ const model = actions => {
       people : false,
       product : false,
       tech : false,
+      proficiency : false,
       learn : false,
       pay : false,
       freedom : false,
-      proficiency : false
     }),
     desired : Map({
       people : false,
       product : false,
       tech : false,
+      proficiency : false,
       learn : false,
       pay : false,
-      freedom : false,
-      proficiency : false
     })
   });
 
