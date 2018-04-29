@@ -5,9 +5,7 @@ const desiredSituationStep = 5;
 const reducers = ({
   workingStart$,
   unemployedStart$,
-  currentLikePeople$,
-  currentLikeProduct$,
-  currentLikeTech$,
+  currentLikeChoices$,
   currentLikeNext$,
   currentProficiency$,
 }) => xs.merge(
@@ -17,14 +15,8 @@ const reducers = ({
   unemployedStart$.mapTo(state =>
     state.set('step', desiredSituationStep )
   ),
-  currentLikePeople$.map(e => state => 
-    state.setIn(['current','people'], e.target.checked)
-  ),
-  currentLikeProduct$.map(e => state => 
-    state.setIn(['current','product'], e.target.checked)
-  ),
-  currentLikeTech$.map(e => state => 
-    state.setIn(['current','tech'], e.target.checked)
+  currentLikeChoices$.map(({ key, selected }) => state => 
+    state.setIn(['current',key], selected)
   ),
   currentLikeNext$.mapTo(state => 
     state.set('step', 2)
