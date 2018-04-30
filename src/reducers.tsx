@@ -3,9 +3,14 @@ import xs from 'xstream'
 const currentSituationStep = 1;
 const desiredSituationStep = 6;
 const boolQuestions = {
-  2 : 'proficiency',
-  3 : 'learn',
-  4 : 'pay'
+  2 : ['current', 'proficiency'],
+  3 : ['current', 'learn'],
+  4 : ['current', 'pay'],
+  5 : ['current', 'freedom'],
+  7 : ['desired', 'proficiency'],
+  8 : ['desired', 'learn'],
+  9 : ['desired', 'pay'],
+  9 : ['desired', 'freedom'],
 };
 
 const reducers = ({
@@ -27,7 +32,7 @@ const reducers = ({
   ),
   buttonBoolClick$.map(answer => state => 
     state
-      .setIn(['current', boolQuestions[state.get('step')]], answer)
+      .setIn(boolQuestions[state.get('step')], answer)
       .set('step', state.get('step') + 1)
   ),
   currentLikeChoices$.map(({ key, selected }) => state => 

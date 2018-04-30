@@ -104,7 +104,31 @@ const steps = [
       <button className="nextButton">Next</button>
     </div>
   },
-  
+  {
+    label : <div>
+      <h2>Is it important that you are proficient in the work you are doing?</h2>
+    </div>,
+    input : yesNoButtons
+  },
+  {
+    label : <div>
+      <h2>Is it important to you that you are learning new things?</h2>
+    </div>,
+    input : yesNoButtons
+  },
+  {
+    label : <div>
+      <h2>Is monetary compensation very important to you?</h2>
+    </div>,
+    input : yesNoButtons
+  },
+  {
+    label : <div>
+      <h2>Is freedom and flexibility very important to you?</h2>
+    </div>,
+    input : yesNoButtons
+  },
+   
 ];
 
 export default steps;
