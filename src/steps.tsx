@@ -127,8 +127,7 @@ const steps = [
       <h2>Is freedom and flexibility very important to you?</h2>
     </div>,
     input : yesNoButtons
-  },
-   
+  }
 ];
 
 export default steps;
