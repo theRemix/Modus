@@ -1,7 +1,7 @@
 import xs from 'xstream'
 
 const currentSituationStep = 1;
-const desiredSituationStep = 5;
+const desiredSituationStep = 6;
 const boolQuestions = {
   2 : 'proficiency',
   3 : 'learn',
@@ -11,9 +11,10 @@ const boolQuestions = {
 const reducers = ({
   workingStart$,
   unemployedStart$,
-  currentLikeChoices$,
-  currentLikeNext$,
+  nextClick$,
   buttonBoolClick$,
+  currentLikeChoices$,
+  desiredLikeChoices$
 }) => xs.merge(
   workingStart$.mapTo(state => 
     state.set('step', currentSituationStep)
@@ -21,16 +22,19 @@ const reducers = ({
   unemployedStart$.mapTo(state =>
     state.set('step', desiredSituationStep )
   ),
-  currentLikeChoices$.map(({ key, selected }) => state => 
-    state.setIn(['current',key], selected)
-  ),
-  currentLikeNext$.mapTo(state => 
-    state.set('step', 2)
+  nextClick$.mapTo(state => 
+    state.set('step', state.get('step') + 1)
   ),
   buttonBoolClick$.map(answer => state => 
     state
       .setIn(['current', boolQuestions[state.get('step')]], answer)
       .set('step', state.get('step') + 1)
+  ),
+  currentLikeChoices$.map(({ key, selected }) => state => 
+    state.setIn(['current',key], selected)
+  ),
+  desiredLikeChoices$.map(({ key, selected }) => state => 
+    state.setIn(['desired',key], selected)
   ),
 );
 

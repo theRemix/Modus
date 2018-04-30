@@ -45,7 +45,7 @@ const steps = [
           </label>
         </li>
       </ul>
-      <button className="currentLikeNext">Next</button>
+      <button className="nextButton">Next</button>
     </div>
   },
   {
@@ -65,6 +65,44 @@ const steps = [
       <h2>Do you feel like you are receiving the monetary compensation that you deserve?</h2>
     </div>,
     input : yesNoButtons
+  },
+  {
+    label : <div>
+      <h2>Do you feel that you have freedom and life balance?</h2>
+    </div>,
+    input : yesNoButtons
+  },
+  {
+    label : <div>
+      <p>
+        Where do you want to be?<br />
+        Think about your values, and what is most important to you if you could work in your ideal environment.
+      </p>
+      <p>(Select all that are true.)</p>
+    </div>,
+    input : <div>
+      <ul className="inputList">
+        <li>
+          <input type="checkbox" id="desiredLikePeople" />
+          <label for="desiredLikePeople" className="label-inline">
+            Is it important that you are working with people you like?
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="desiredLikeProduct" />
+          <label for="desiredLikeProduct" className="label-inline">
+            Is it important that you are working on a project/product that you care about, or a project/product that serves a purpose you care about?
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="desiredLikeTech" />
+          <label for="desiredLikeTech" className="label-inline">
+            Is the tech stack you are using important to you?
+          </label>
+        </li>
+      </ul>
+      <button className="nextButton">Next</button>
+    </div>
   },
   
 ];
