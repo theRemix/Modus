@@ -1,0 +1,78 @@
+body {
+  background: #AAA;
+}
+
+.t1 {
+  width: 30px;
+  height: 20px;
+  padding: 100px;
+  border: 2px dashed darkcyan;
+  cursor: pointer;
+}
+
+.t1-selected-true {
+  background: lightgreen;
+}
+
+.t1-selected-false {
+  background: #777;
+}
+
+.t1-focused-true {
+  width: 400px;
+  height: 400px;
+}
+
+.t1-focused-false {
+  
+}
+
+.t1-love {
+  margin: auto;
+}
+.t1-learn {
+  float: right;
+}
+.t1-proficiency {
+  float: left;
+}
+.t1-reward {
+  margin: auto;
+  margin-top: 200px;
+}
+
+.t2 {
+  width: 30px;
+  height: 20px;
+  padding: 50px;
+  border: 2px dashed darkorange;
+  cursor: pointer;
+}
+
+.t2-selected-true {
+  background: lightskyblue;
+}
+
+.t1-selected-false {
+  background: #777;
+}
+
+.t2-love-people {
+  margin: auto;
+}
+
+.t2-love-product {
+  float: left;
+}
+
+.t2-love-tech {
+  float: right;
+}
+
+.t2-reward-freedom {
+
+}
+
+.t2-reward-pay {
+
+}
