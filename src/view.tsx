@@ -1,4 +1,5 @@
 import steps from './steps'
+import resolution from './resolution'
 
 const resolutionStep = 10;
 
@@ -19,7 +20,7 @@ const view = state$ => state$.map( state  =>
       :
         <div>
           <h2>Resolution</h2>
-          { JSON.stringify(state) }
+          { resolution(state) }
         </div>
 
     }

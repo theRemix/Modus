@@ -22,10 +22,14 @@ const reducers = ({
   desiredLikeChoices$
 }) => xs.merge(
   workingStart$.mapTo(state => 
-    state.set('step', currentSituationStep)
+    state
+      .set('currentlyWorking', true)
+      .set('step', currentSituationStep)
   ),
   unemployedStart$.mapTo(state =>
-    state.set('step', desiredSituationStep )
+    state
+      .set('currentlyWorking', false)
+      .set('step', desiredSituationStep )
   ),
   nextClick$.mapTo(state => 
     state.set('step', state.get('step') + 1)
